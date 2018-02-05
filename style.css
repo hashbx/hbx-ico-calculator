@@ -1,0 +1,25 @@
+html,
+body {
+    height: 100%;
+    /* background-color:#1c2b36; */
+}
+
+.text-light {
+    /* color: #fff; */
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.bg-terminal {
+    background: #fff;
+}
+
+.bg {
+    background: #1c2b36;
+}
+
+.txt-head {
+    color: #c5bebe;
+}

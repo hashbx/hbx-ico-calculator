@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+    <title>HBX ICO - Profitable Calculator</title>
+
+</head>
+
+<body>
+    <div class="bg">
+        <div class="container">
+            <br>
+            <center>
+                <h3 class="txt-head">HashBX ICO Profit Calculator</h3>
+            </center>
+            <br>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <br>
+            <br>
+            <div class="col-md-12 ">
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Total HBX of holders</label>
+                    <input type="number" class="form-control" id="total_token" placeholder="total token" value="129000">
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Coin name</label>
+                            <select class="form-control" id="ticker">
+                                <option value="bitcoin">Bitcoin</option>
+                                <option value="bitcoin-cash">Bitcoin Cash</option>
+                                <option value="litecoin">Litecoin</option>
+                                <option value="dash">Dash</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Coin per USD</label>
+                            <input type="text" class="form-control" id="coin_price" value="1000">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Coins per day (mining)</label>
+                            <input type="number" class="form-control" id="coin_mining" placeholder="Pool accept" value="12.5">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">AVG block per day</label>
+                            <span class="badge badge-pill badge-secondary pointer" id="avg_popover" data-container="body" data-toggle="popover" data-placement="top"
+                                data-content="Average mined 'Block' amount shown here is not indicated the exact amount the pool can mine per day due to the 
+                                'Difficulty Rate' and other system condition. To check the exact amount, please look up at block explorer">
+                                ?
+                            </span>
+                            <input type="number" class="form-control" id="avg_block" placeholder="Pool accept" value="2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Amount of HBX token</label>
+                    <input type="number" class="form-control" id="hbx_holding" placeholder="HBX token" value="100">
+                </div>
+
+                <table>
+                    <tr>
+                        <td>
+                            <b>Holding percentage : </b>
+                        </td>
+                        <td>
+                            <span id="holding_percentage">0</span> %</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Maintenance fee : </b>
+                        </td>
+                        <td>
+                            <span id="maintenance_fee">0</span> Token (40 % of profit)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Profit per day : </b>
+                        </td>
+                        <td>
+                            <span id="profit_per_day">0</span> Token</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Profit per month (30) : </b>
+                        </td>
+                        <td>
+                            <span id="profit_per_month">0</span> Token</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Profit per year (365) : </b>
+                        </td>
+                        <td>
+                            <span id="profit_per_year">0</span> Token</td>
+                    </tr>
+                </table>
+
+                <center>
+                    <br>
+                    <button id="calculate" class="btn btn-dark btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">
+                        Calculate
+                    </button>
+                </center>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
